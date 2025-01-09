@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .card {
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-primary {
+            background-color: #13c5dd;
+            border-color: #13c5dd;
+        }
+
+        .btn-primary:hover {
+            background-color: #11b0c7;
+            border-color: #11b0c7;
+        }
+
+        .dashboard-header {
+            background-color: #13c5dd;
+            color: white;
+            border-radius: 10px 10px 0 0;
+        }
+
+        .form-control, .form-select {
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <h1 class="text-primary m-0"><i class="fa fa-clinic-medical me-2"></i>Patient Dashboard</h1>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Profile</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+    <!-- Dashboard Start -->
+    <div class="container py-5">
+        <div class="row">
+            <div class="col-lg-3">
+                <!-- Sidebar -->
+                <div class="card">
+                    <div class="card-header dashboard-header">
+                        <h5 class="mb-0">Patient Menu</h5>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item"><a href="#upload-reports" class="text-decoration-none">Upload Medical Reports</a></li>
+                        <li class="list-group-item"><a href="#select-doctor" class="text-decoration-none">Choose Doctor</a></li>
+                        <li class="list-group-item"><a href="#schedule-appointments" class="text-decoration-none">Schedule Appointments</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-9">
+                <!-- Main Content -->
+                <div id="upload-reports" class="card mb-4">
+                    <div class="card-header dashboard-header">
+                        <h5 class="mb-0">Upload Medical Reports</h5>
+                    </div>
+                    <div class="card-body">
+                        <form>
+                            <div class="mb-3">
+                                <label for="report-file" class="form-label">Select File</label>
+                                <input type="file" class="form-control" id="report-file" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Upload Report</button>
+                        </form>
+                    </div>
+                </div>
+
+                <div id="select-doctor" class="card mb-4">
+                    <div class="card-header dashboard-header">
+                        <h5 class="mb-0">Choose Doctor</h5>
+                    </div>
+                    <div class="card-body">
+                        <form>
+                            <div class="mb-3">
+                                <label for="doctor-select" class="form-label">Select a Doctor</label>
+                                <select class="form-select" id="doctor-select" required>
+                                    <option selected disabled>Choose a Doctor</option>
+                                    <option value="1">Dr. John Doe - Cardiology</option>
+                                    <option value="2">Dr. Jane Smith - Dermatology</option>
+                                    <option value="3">Dr. Emily Brown - Neurology</option>
+                                    <option value="4">Dr. Michael Green - Pediatrics</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Confirm Doctor</button>
+                        </form>
+                    </div>
+                </div>
+
+                <div id="schedule-appointments" class="card">
+                    <div class="card-header dashboard-header">
+                        <h5 class="mb-0">Schedule Appointments</h5>
+                    </div>
+                    <div class="card-body">
+                        <form>
+                            <div class="mb-3">
+                                <label for="appointment-date" class="form-label">Choose Date</label>
+                                <input type="date" class="form-control" id="appointment-date" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="appointment-time" class="form-label">Choose Time</label>
+                                <input type="time" class="form-control" id="appointment-time" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Schedule Appointment</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Dashboard End -->
+
+    <!-- Footer Start -->
+    <footer style="background-color: #13c5dd; width: 100vw;" class="text-white text-center py-3">
+        <div class="container">
+            <p class="mb-0">&copy; 2025 Your Website Name. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <!-- Footer End -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
